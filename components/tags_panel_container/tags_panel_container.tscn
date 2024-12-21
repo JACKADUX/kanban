@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8npvy5rknkwc"]
+
+[ext_resource type="Script" path="res://components/tags_panel_container/tags_panel_container.gd" id="1_pnh7f"]
+[ext_resource type="Script" path="res://boghma_uilib/behavior_component/container_agent.gd" id="2_3q8u3"]
+[ext_resource type="PackedScene" uid="uid://clxfq5w41naja" path="res://components/tags_panel_container/tag_panel.tscn" id="3_88dbv"]
+[ext_resource type="Script" path="res://boghma_uilib/behavior_component/free_parent_when_start.gd" id="4_4xvvb"]
+[ext_resource type="Texture2D" uid="uid://dcma05k3gi0ra" path="res://assets/icons_v2/add.png" id="5_vh0yq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hs2qi"]
+
+[node name="TagsPanelContainer" type="PanelContainer"]
+offset_right = 427.0
+offset_bottom = 237.0
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hs2qi")
+script = ExtResource("1_pnh7f")
+
+[node name="ContainerAgent" type="Node" parent="." node_paths=PackedStringArray("container")]
+unique_name_in_owner = true
+script = ExtResource("2_3q8u3")
+container = NodePath("../HBoxContainer/HFlowContainer")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HFlowContainer" type="HFlowContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="TagPanel" parent="HBoxContainer/HFlowContainer" instance=ExtResource("3_88dbv")]
+layout_mode = 2
+
+[node name="FPWS" type="Node" parent="HBoxContainer/HFlowContainer/TagPanel"]
+script = ExtResource("4_4xvvb")
+
+[node name="AddButton" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_constants/icon_max_width = 16
+icon = ExtResource("5_vh0yq")
+flat = true

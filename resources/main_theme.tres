@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://vt5jwuq71xt8"]
+
+[ext_resource type="FontFile" uid="uid://cjtwyq5kug8dt" path="res://assets/fonts/NotoSansSC-VariableFont_wght.ttf" id="1_2gv10"]
+
+[sub_resource type="FontVariation" id="FontVariation_fcuxh"]
+base_font = ExtResource("1_2gv10")
+variation_opentype = {
+2003265652: 400
+}
+
+[resource]
+default_font = SubResource("FontVariation_fcuxh")
+default_font_size = 16

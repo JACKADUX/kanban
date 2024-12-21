@@ -1,0 +1,40 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://cjtwyq5kug8dt"
+path="res://.godot/imported/NotoSansSC-VariableFont_wght.ttf-f2b952c573120ab0a2c2da3a0816ad68.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/NotoSansSC-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/NotoSansSC-VariableFont_wght.ttf-f2b952c573120ab0a2c2da3a0816ad68.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=0
+subpixel_positioning=0
+oversampling=4.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0),
+"variation_embolden": 0.0
+}]
+language_support={}
+script_support={}
+opentype_features={}
